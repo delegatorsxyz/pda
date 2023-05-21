@@ -5,7 +5,7 @@
 [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/),  bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
 
 ## Contributing
-
+ 
 ### Getting Started
 
 Install the dependencies
