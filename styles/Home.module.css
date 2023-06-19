@@ -3,7 +3,7 @@
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 10vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -14,7 +14,7 @@
 
 .footer {
   display: flex;
-  flex: 1;
+  flex: 3;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
   justify-content: center;
@@ -26,6 +26,11 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+.buttonEye {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .title a {
@@ -92,6 +97,10 @@
   margin: 0;
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.logo {
+  border-radius: 50%;
 }
 
 @media (max-width: 600px) {

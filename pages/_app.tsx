@@ -3,8 +3,10 @@ import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import type { AppProps } from 'next/app';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, mainnet, optimism, polygon } from 'wagmi/chains';
+import { arbitrum, goerli, mainnet, optimism, polygon, localhost } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
+import { ThemeProvider } from 'styled-components'
+import { ThorinGlobalStyles, lightTheme } from '@ensdomains/thorin' 
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
@@ -32,11 +34,14 @@ const wagmiConfig = createConfig({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <ThemeProvider theme={lightTheme}>
+    <ThorinGlobalStyles />
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
+    </ThemeProvider>
   );
 }
 
